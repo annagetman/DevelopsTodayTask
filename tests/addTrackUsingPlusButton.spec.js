@@ -27,7 +27,7 @@ test.describe('Add Track Using "+" Button', () => {
     await expect(playlistRow).toHaveCount(1);
 
     await expect(playlistRow.getByRole('button', { name: '-' })).toBeVisible();
-    await expect(playlistRow.getByText('03:00')).toBeVisible(); // якщо відома точна тривалість
+    await expect(playlistRow.getByText('03:00')).toBeVisible();
   });
 
   test('Ensure that clicking the "+" button next to a track adds it to the “Your Playlist” list', async ({ page }) => {
