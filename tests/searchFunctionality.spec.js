@@ -6,7 +6,7 @@ test.describe('Search Functionality', () => {
   });
 
   test('Test the search input field for filtering the available tracks.', async ({ page }) => {
-    const searchInput = page.locator('#\\:r0\\:');
+    const searchInput = page.getByLabel('Search');
     await expect(searchInput).toBeVisible();
     await expect(searchInput).toBeEnabled();
 
@@ -26,7 +26,7 @@ test.describe('Search Functionality', () => {
   });
 
   test('Ensure only matching tracks are displayed after search input', async ({ page }) => {
-    const searchInput = page.locator('#\\:r0\\:');
+    const searchInput = page.getByLabel('Search');
     await expect(searchInput).toBeVisible();
     await expect(searchInput).toBeEnabled();
 
